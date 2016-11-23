@@ -1,5 +1,5 @@
 <?php
-namespace Filld\Health\Provider;
+namespace Filld\Health\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Route;
@@ -24,7 +24,7 @@ class HealthServiceProvider extends ServiceProvider
 
     public function boot()
     {
-        Route::get('health', '\Filld\Health\Controllers\HealthController@index');
+        $this->app->get('health', '\Filld\Health\Controllers\HealthController@index');
     }
 
 

@@ -1,6 +1,7 @@
 <?php
-namespace Filld\Controllers;
+namespace Filld\Health\Controllers;
 
+use App\Http\Controllers\Controller;
 use DB;
 
 class HealthController extends Controller
