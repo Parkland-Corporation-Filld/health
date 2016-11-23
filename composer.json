@@ -1,0 +1,21 @@
+{
+    "name": "filld/health",
+    "description": "Simple health check for your database connections.",
+    "type": "laravel5-plugin",
+    "require": {
+        "laravel/laravel": "~5.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ryan Hoshor",
+            "email": "rhoshor@filld.co"
+        }
+    ],
+    "autoload": {
+    	"psr-4": {
+    		"Filld\\Health\\": "src/"
+    	}
+    },
+    "minimum-stability": "stable"
+}
