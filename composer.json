@@ -1,9 +1,9 @@
 {
     "name": "filld/health",
     "description": "Simple health check for your database connections.",
-    "type": "laravel5-plugin",
+    "type": "Laravel/Lumen Plugin",
     "require": {
-        "laravel/laravel": "~5.0"
+        "illuminate/database": "~5.0"
     },
     "license": "MIT",
     "authors": [
