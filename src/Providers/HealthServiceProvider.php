@@ -2,7 +2,6 @@
 namespace Filld\Health\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\Route;
 
 class HealthServiceProvider extends ServiceProvider
 {
