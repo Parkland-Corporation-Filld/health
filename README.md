@@ -1,6 +1,8 @@
 # Filld Laravel / Lumen Health check
 A simple plugin for Laravel / Lumen, which enumerates your database connections,
-and returns a JSON block showing if the connections are healthy or not.
+and returns a JSON block showing if the connections are healthy or not. It
+specifically doesn't show the connection names so as to not leak confidential
+information.
 
 ```JSON
 {
@@ -22,8 +24,7 @@ Register the Service provider in `config/app.php`
 ```PHP
 'providers' => [
     // Other Service Providers
-
-    App\Providers\ComposerServiceProvider::class,
+    Filld\Health\Providers\HealthServiceProvider::class,
 ],
 ```
 
