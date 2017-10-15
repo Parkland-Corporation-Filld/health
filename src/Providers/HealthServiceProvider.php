@@ -23,7 +23,20 @@ class HealthServiceProvider extends ServiceProvider
 
     public function boot()
     {
-        $this->app->get('health', '\Filld\Health\Controllers\HealthController@index');
+        $router = $this->app;
+
+        preg_match('/\(\d\.\d\.\d\)/', app()->version(), $matches);
+
+        if (!empty($matches[0]))
+        {
+            $version = intval(str_replace(['.', '(', ')'], '', $matches[0]));
+            if ($version > 550)
+            {
+                $router = $this->app->router;
+            }
+        }
+
+        $router->get('health', '\Filld\Health\Controllers\HealthController@index');
     }
 
 
