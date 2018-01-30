@@ -23,7 +23,7 @@ class HealthServiceProvider extends ServiceProvider
 
     public function boot()
     {
-        $this->app->get('health', '\Filld\Health\Controllers\HealthController@index');
+        $this->app->router->get('health', '\Filld\Health\Controllers\HealthController@index');
     }
 
 
